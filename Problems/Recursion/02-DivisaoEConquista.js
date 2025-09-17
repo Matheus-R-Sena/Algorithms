@@ -9,25 +9,33 @@ function maiorSubArray (vetor) {
     
     const MatrizBase = [];
     
+    //Os próximos laços armazenam na Matriz base todos os arrays que representam todas as possibilidades de subarrays possíveis
+
+    //Pega todos os Números da esquerda para a direita
     for (let i = 0; i < vetor.length; i++){
-        const arrayTemp = [];
-        arrayTemp.push(vetor[i]);
+        let arrayTemp = [];
+        for (let j = 0; j <= i; j++){
+        arrayTemp.push(vetor[j])    
+        }
+        MatrizBase.push(arrayTemp);
+        }
+
+    //Pega todas as possibilidades de array da direita para a esquerda excluindo o array completo que já foi mapeada pelo for anterior
+    for (let i = vetor.length - 1; i >= 1; i--){
+        let arrayTemp = [];
+        for (let j = vetor.length - 1; j >= i; j--){
+            arrayTemp.push(vetor[j]);
+        }
         MatrizBase.push(arrayTemp);
     }
-    
-    
-    
-    let soma = 0;
-    let MaiorSubArr = [];
-    for (let i = 0; i < vetor.length; i++){
-        if (vetor[i] > 0){
-            if (MaiorSubArr.length === 0){
-                MaiorSubArr.push(vetor[i]);
-            } else if (vetor[i-1] > 0 ){
 
-            }
-        }
-    }
+    // Agora um laço para pegar os sub arrays do meio
 
-    return maior 
+
+
+
+
+    return MatrizBase;
 }
+const vetorr = [1, 2, -2, 5, -1, 4, 12]
+console.log(maiorSubArray(vetorr));
