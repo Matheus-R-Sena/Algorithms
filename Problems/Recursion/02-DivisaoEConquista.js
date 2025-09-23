@@ -31,6 +31,38 @@ function maiorSubArray (vetor) {
 
     // Agora um laço para pegar os sub arrays do meio
 
+    //Para o caso do Array ser Impar
+    if (vetor.length % 2 === 0){
+        indice_meio1 = (vetor / 2) - 1;
+        indice_meio2 = vetor /2;
+
+        //Adicionando os elementos do meio como possibilidade
+        let arrayTemp = [indice_meio1, indice_meio2];
+        MatrizBase.push(arrayTemp);
+
+        //Percorrendo o lado esquerdo até o meio
+        for (let i = 0; i < indice_meio1; i++){
+
+        }
+
+        //Percorrendo o meio até o lado esquerdo
+
+        for (let i = indice_meio1; i >= 0; i--){
+
+        }
+
+        //Percorrendo o meio até o lado direito
+        for (let i = indice_meio2; i < vetor.length; i++){
+
+        }
+
+        //Percorrendo o meio até o lado esquerdo
+
+        for ( ){
+
+        }
+
+    }
 
 
 
