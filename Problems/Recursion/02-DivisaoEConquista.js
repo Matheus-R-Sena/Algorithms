@@ -1,3 +1,8 @@
+//This method to solve this problem trying to cover all of the possibilities by using
+//loops is not efficient, Let's make the recursion method
+
+
+
 // 1. Crio um array de arrays. Uma matriz (todos vazios)
 // 2. Armazeno todas as possibilidades dentro desta matriz, cada array dentro dela será uma possibilidade 
 // 3. Eu chamo uma função que retorna a soma do subarray
