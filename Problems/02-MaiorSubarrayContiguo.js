@@ -50,3 +50,5 @@ const vetor = [1,-2,3,-50,5,6]
 
 //21 subarrays
 console.log(biggerSubarrayVersion01(vetor));
+
+
