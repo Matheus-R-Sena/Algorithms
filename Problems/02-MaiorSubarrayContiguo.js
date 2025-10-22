@@ -27,10 +27,8 @@ const biggerSubarrayVersion01 = (arr) => {
 
     return maiorSoma;
 }
-const vetor = [1,-2,3,-50,5,6]
 
-
-//testes
+//testes para a solção cúbica
 //const vetor = [5]  //PASSOU!!
 //const vetor = [1, 2, 3, 4, 5] //PASSOU!!   
 //const vetor = [-1, -2, -3, -4] //PASSOU!!
@@ -47,8 +45,28 @@ const vetor = [1,-2,3,-50,5,6]
 //const vetor = [1, -1, 1, -1, 1, -1, 10]
 //const vetor = [2, 3, 4, -2, -3, 5, -3, 2, 2]//PASSOU!!
 
+function biggerSubarrayVersion02 (arr) {
+
+    let somaMaxima = 0;
+    for(let i = 0; i < arr; i++){
+        let somaParcial = 0;
+        for (let j = i; j < arr; j++){
+        somaParcial += arr[j]
+        if (somaParcial > somaMaxima){
+            somaMaxima = somaParcial;
+        }
+        }
+    }
+    return somaMaxima;
+}
+
+
+
+
+const vetor = [1,-2,3,-50,5,6]
+
 
 //21 subarrays
-console.log(biggerSubarrayVersion01(vetor));
+console.log(biggerSubarrayVersion02(vetor));
 
 
