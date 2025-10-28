@@ -83,8 +83,17 @@ function biggerSubarrayVersion02 (arr) {
 //Solução linear
 function biggerSubarrayVersion03 (arr) {
 
+    let somaMaxima = arr[0];
 
+    for (let i = 0; i < arr.length; i++){
+        //Aqui está o problema preciso que somaParcial zere a cada loop
+        let somaParcial = 0;
+        somaParcial += arr[i];
+        if (somaParcial > somaMaxima){
+            somaMaxima = somaParcial;
+        }
 
+    }
     return somaMaxima;
 }
 
