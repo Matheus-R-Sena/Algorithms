@@ -85,6 +85,7 @@ function biggerSubarrayVersion03 (arr) {
 //somaMaxima = -1
     let somaMaxima = arr[0];
     for (let i = 0; i < arr.length; i++){
+        //Pular o primeiro elemento.
         if (i === 0) continue;
         somaMaxima += arr[i];
         if (somaMaxima < arr[i]) somaMaxima = arr[i];
