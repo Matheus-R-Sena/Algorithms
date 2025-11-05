@@ -83,19 +83,12 @@ function biggerSubarrayVersion02 (arr) {
 //Solução linear Aloritmo de Kadane
 function biggerSubarrayVersion03 (arr) {
 //somaMaxima = -1
-    let somaMaxima = arr[0];
-    for (let i = 0; i < arr.length; i++){
-        //Pular o primeiro elemento.
-        if (i === 0) continue;
-        somaMaxima += arr[i];
-        if (somaMaxima < arr[i]) somaMaxima = arr[i];
-    }
     return somaMaxima;
 }
 
-//const vetor = [5]                           //1)  Resultado: 5 PASSOU!!
+const vetor = [5]                           //1)  Resultado: 5 PASSOU!!
 //const vetor = [1, 2, 3, 4, 5]               //2)  Resultado: 15 PASSOU!!   
-const vetor = [-1, -2, -3, -4]              //3)  Resultado: -1 PASSOU!!
+//const vetor = [-1, -2, -3, -4]              //3)  Resultado: -1 PASSOU!!
 //const vetor = [4, -1, 2, 1]                 //4)  Resultado: 6 PASSOU!! 
 //const vetor = [2, -8, 3, -2, 4, -10]        //5)  Resultado: 5 PASSOU!!
 //const vetor = [1, -3, 2, 1, -1] //8)        //6)  Resultado: 3 PASSOU!!
